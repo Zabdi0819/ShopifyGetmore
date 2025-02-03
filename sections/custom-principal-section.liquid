@@ -1,0 +1,34 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-p-image-banner">
+  {% if section.settings.image != blank %}
+    <div class="banner-p-content">
+      <h1>Las mejores raquetas para <br>jugar <span class="highlight">Tennis</span></h1>
+      <a href="#about-us" class="btn-about">ACERCA DE NOSOTROS →</a>
+    </div>
+    <img src="{{ section.settings.image | image_url }}" 
+         alt="{{ section.settings.image.alt | default: 'Banner Image' }}" 
+         class="custom-p-banner-img"
+      width="1440"
+      height="785">
+  {% endif %}
+</section>
+
+
+{% schema %}
+{
+  "name": "Custom Principal Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Selecciona una imagen"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Principal Banner"
+    }
+  ]
+}
+{% endschema %}

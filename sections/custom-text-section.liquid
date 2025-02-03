@@ -1,0 +1,44 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-text-section">
+  <div class="div-tennis">
+    <span class="tennis">TENNIS</span>
+  </div>
+
+  <div class="div-RaquetasAccesorios">
+    <span class="RaquetasAccesorios">
+      Raquetas.Accesorios. <br>
+      Pelotas.
+    </span>
+    <br>
+    <span class="info">
+      Conoce nuestras raquetas y aprende a jugar <br>
+      Tennis cómo un profesional.
+    </span>
+  </div>
+
+  <div class="div-bubtton-history">
+    <span class="button-hiistory">
+      HISTORIA
+    <img src="{{ section.settings.arrow | image_url }}" alt="Historia" class="arrow" width="23" height="6">
+    </span>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Text Sectionr",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "arrow",
+        "label": "Historia"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Text Section"
+      }
+    ]
+  }
+{% endschema %}

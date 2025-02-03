@@ -1,0 +1,79 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-product-section">
+  <div class="carousel-container">
+    <!-- Carrusel -->
+    <div class="carousel">
+      <div class="carousel-items">
+        <img src="{{ section.settings.product2 | image_url }}" alt="Producto 1" width="530" height="468" class="carousel-item">
+        <img src="{{ section.settings.product2 | image_url }}" alt="Producto 2" width="530" height="468" class="carousel-item">
+        <img src="{{ section.settings.product2 | image_url }}" alt="Producto 3" width="530" height="468" class="carousel-item">
+        <img src="{{ section.settings.product2 | image_url }}" alt="Producto 4" width="530" height="468" class="carousel-item">
+      </div>
+      <div class="carousel-text">
+        <h1>Nuestras <br><b>Raquetas</b></h1>
+        <p>Conoce nuestras raquetas y <br> aprende a jugar Tennis cómo un <br> profesional</p>
+      </div>
+      
+      <!-- Flechas de navegación -->
+      <div class="carousel-nav-items">     
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+          <span class="indicator" data-index="3"></span>
+        </div>
+        <span class="carousel-nav carousel-nav-left">&#9664;</span>
+        <span class="carousel-nav carousel-nav-right">&#9654;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <!-- Slider -->
+    <div class="slider" id="slider">
+      <div class="slider-item">
+        <div class="image-badge">1</div>
+        <img src="{{ section.settings.product | image_url }}" alt="Slider Imagen 1" width="288" height="344">
+      </div>
+      <div class="slider-item">
+        <div class="image-badge">2</div>
+        <img src="{{ section.settings.product | image_url }}" alt="Slider Imagen 2" width="288" height="344">
+      </div>
+      <div class="slider-item">
+        <div class="image-badge">3</div>
+        <img src="{{ section.settings.product | image_url }}" alt="Slider Imagen 3" width="288" height="344">
+      </div>
+      <div class="slider-item">
+        <div class="image-badge">4</div>
+        <img src="{{ section.settings.product | image_url }}" alt="Slider Imagen 4" width="288" height="344">
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ 'custom.js' | asset_url }}" defer></script>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Product Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "product",
+        "label": "Producto"
+      },
+      {
+        "type": "image_picker",
+        "id": "product2",
+        "label": "Producto"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Product Section"
+      }
+    ]
+  }
+{% endschema %}

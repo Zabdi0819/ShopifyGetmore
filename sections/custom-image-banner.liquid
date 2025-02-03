@@ -1,0 +1,29 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-image-banner">
+  {% if section.settings.image != blank %}
+    <img src="{{ section.settings.image | image_url }}" 
+         alt="{{ section.settings.image.alt | default: 'Banner Image' }}" 
+         class="custom-banner-img" 
+         width="1200" 
+         height="586">
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Custom Image Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Selecciona una imagen"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Banner"
+    }
+  ]
+}
+{% endschema %}

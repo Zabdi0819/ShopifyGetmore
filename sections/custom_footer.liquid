@@ -1,0 +1,97 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer-custom">
+  <nav class="footer-nav">
+    <ul class="nav-links">
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="#">Acerca de nosotros</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="footer-logos">
+    {% if section.settings.logo0 != blank %}
+      <img src="{{ section.settings.logo0 | image_url }}" alt="Logo 1" class="logo social-icons" width="31" height="31">
+    {% endif %}
+    {% if section.settings.logo1 != blank %}
+      <img src="{{ section.settings.logo1 | image_url }}" alt="Logo 2" class="logo social-icons" width="31" height="31">
+    {% endif %}
+    {% if section.settings.logo2 != blank %}
+      <img src="{{ section.settings.logo2 | image_url }}" alt="Logo 3" class="logo social-icons" width="31" height="31">
+    {% endif %}
+    {% if section.settings.logo3 != blank %}
+      <img src="{{ section.settings.logo3 | image_url }}" alt="Logo 4" class="logo social-icons" width="31" height="31">
+    {% endif %}
+    {% if section.settings.logo4 != blank %}
+      <img src="{{ section.settings.logo4 | image_url }}" alt="Logo 5" class="logo social-icons" width="31" height="31">
+    {% endif %}
+  </div>
+
+  <div class="footer_store_logo">
+      <img src="{{ section.settings.store_logo | image_url }}" alt="Logo tienda" class="store_log" width="55" height="55">
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer Personalizado",
+  "tag": "footer",
+  "class": "footer-custom",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo0",
+      "label": "Red Social 0"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo1",
+      "label": "Red Social 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "Red Social 0 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo3",
+      "label": "Red Social 0 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo4",
+      "label": "Red Social 0 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "store_logo",
+      "label": "Logo de tienda"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de Fondo",
+      "default": "#c8dd3f"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "Menú",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "footer_menu",
+          "label": "Selecciona un Menú"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Íconos Sociales"
+    }
+  ]
+}
+{% endschema %}

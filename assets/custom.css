@@ -1,0 +1,684 @@
+/* Principal Banner */
+.custom-p-image-banner {
+  position: relative;
+  width: 100%;
+  height: 785px;
+  overflow: hidden;
+}
+
+.custom-p-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.banner-p-content {
+  position: relative;
+  z-index: 2; 
+  color: white;
+  margin-left: 100px;
+  padding: 20px;
+  border-left: 2px solid white;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-p-content h1 {
+  font-size: 53px;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 68px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #cbe346;
+}
+
+.btn-about {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid white;
+  color: white;
+  max-width: 269px;
+  height: 53px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-about:hover {
+  background-color: white;
+  color: #cbe346;
+}
+
+/* Media Queries para Responsividad */
+
+@media (max-width: 1024px) {
+  .custom-p-image-banner {
+    height: 500px; 
+  }
+
+  .banner-p-content {
+    margin-left: 50px; 
+    padding: 15px; 
+  }
+
+  .banner-p-content h1 {
+    font-size: 40px; 
+    line-height: 50px;
+  }
+
+  .btn-about {
+    padding: 8px 18px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .custom-p-image-banner {
+    height: 400px; 
+  }
+
+  .banner-p-content {
+    margin-left: 20px;
+    padding: 10px; 
+    border-left: none; 
+    text-align: center; 
+  }
+
+  .banner-p-content h1 {
+    font-size: 30px; 
+    line-height: 40px;
+  }
+
+  .btn-about {
+    margin: 0 auto;
+    padding: 10px 20px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-p-image-banner {
+    height: 300px; 
+  }
+
+  .banner-p-content {
+    margin-left: 0; 
+    padding: 8px; 
+    text-align: center; 
+  }
+
+  .banner-p-content h1 {
+    font-size: 25px; 
+    line-height: 35px;
+  }
+
+  .btn-about {
+    margin: 0 auto;
+    padding: 8px 18px; 
+  }
+}
+
+/* End principal banner */
+
+
+
+/* Text Section */
+.custom-text-section {
+  background-color: #f3f4f8;
+  min-height: 392px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-tennis {
+  display: block;
+  width: 174px;
+  height: 33px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  color: #cbe346;
+  margin-top: 104px;
+  margin-left: auto;
+}
+
+.div-RaquetasAccesorios {
+  display: block;
+  width: 555px;
+  margin-top: 71px;
+  margin-left: 33px;
+}
+
+.RaquetasAccesorios {
+  font-size: 50px;
+  color: #1e2335;
+  line-height: 1.2;
+}
+
+.info {
+  display: block;
+  width: 393px;
+  font-size: 18px;
+  color: #787878;
+  margin-top: 15px;
+}
+
+.div-bubtton-history {
+  width: 234px;
+  height: 53px;
+  padding: 15px 38px;
+  border-radius: 26.5px;
+  border: solid 1px #282e47;
+  margin-top: 220px;
+  margin-right: 168px;
+  display: flex;
+  align-items: center;
+}
+
+.button-hiistory {
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.01px;
+  color: #273048;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 45px;
+}
+
+/* Media Queries para dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+  .custom-text-section {
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: 0;
+    min-height: 0;
+  }
+
+  .div-tennis {
+    display: block;
+    margin-left: 0;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    width: auto; 
+  }
+
+  .div-RaquetasAccesorios {
+    width: 100%; 
+    margin-top: 21px;
+    margin-left: 0; 
+    text-align: center; 
+  }
+
+  .RaquetasAccesorios{
+    font-size: 45px; 
+  }
+
+  .info {
+    width: 100%;
+    text-align: center; 
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  .div-bubtton-history {
+    margin-top: 40px; 
+    margin-right: 0; 
+    text-align: center; 
+  }
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 480px) {
+  .div-RaquetasAccesorios {
+    width: 100%;
+    margin-top: 21px;
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .RaquetasAccesorios {
+    font-size: 35px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+
+  .button-hiistory {
+    font-size: 12px;/
+  }
+}
+/* End text section*/
+
+
+
+/* Product section*/
+.custom-product-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3px;
+  flex-wrap: wrap;
+}
+
+.carousel-container {
+  width: 40%;
+  position: relative;
+  min-height: 468px;
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 0;
+  margin-left: 223px;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  z-index: 1;
+}
+
+.carousel-text h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.carousel-text p {
+  font-size: 18px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 23px;
+  z-index: 1;
+}
+
+.indicator {
+  width: 8px;
+  height: 7.8px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #c8dd3f;
+}
+
+.carousel-nav-items {
+  position: absolute;
+  bottom: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+}
+
+.carousel-nav {
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background-color: #cbe346;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-nav.inactive {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.carousel-nav-left {
+  left: 10px;
+}
+
+.carousel-nav-right {
+  right: 10px;
+}
+
+.slider-container {
+  width: 55%;
+  height: 468px;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+
+.slider-container.active {
+  cursor: grabbing;
+}
+
+.slider {
+  margin-top: 30px;
+  display: flex;
+  gap: 36px;
+  transition: transform 0.3s ease-out;
+}
+
+.slider-item {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  position: relative;
+  margin: 5px;
+}
+
+.image-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #cbe346;
+  color: white;
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1300px) {
+  .carousel-text {
+    margin-left: 120px;
+    font-size: 20px;
+  }
+
+  .carousel-text h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .custom-product-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-container,
+  .slider-container {
+    width: 80%;
+    min-height: 400px;
+  }
+
+  .carousel-text {
+    margin-left: 50px;
+    font-size: 18px;
+  }
+
+  .carousel-text h1 {
+    font-size: 40px;
+  }
+
+  .carousel-indicators,
+  .carousel-nav-items {
+    bottom: 50px;
+  }
+
+  .slider-item {
+    width: 250px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .carousel-container,
+  .slider-container {
+    width: 90%;
+    min-height: 350px;
+  }
+
+  .carousel-text {
+    font-size: 16px;
+    margin-left: 120px;
+  }
+  
+  .carousel-text h1 {
+    font-size: 24px;
+  }
+
+  .carousel-indicators,
+  .carousel-nav-items {
+    bottom: 50px;
+    gap: 15px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .slider-item {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-container,
+  .slider-container {
+    width: 100%;
+    min-height: 300px;
+  }
+
+   .carousel-text {
+    font-size: 16px;
+    margin-left: 120px;
+  }
+
+  .carousel-text h1 {
+    font-size: 24px;
+  }
+
+  .carousel-text p {
+    font-size: 14px;
+  }
+
+  .carousel-indicators,
+  .carousel-nav-items {
+    bottom: 50px;
+    gap: 10px;
+  }
+
+  .carousel-nav {
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+  }
+
+  .slider-item {
+    width: 150px;
+  }
+}
+
+/* End product section*/
+
+
+/* Banner image*/
+.custom-image-banner {
+  width: 100%;
+  padding: 0;
+  display: block;
+  max-height: 586px;
+  overflow: hidden;
+}
+
+.custom-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom; 
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .custom-image-banner {
+    max-height: none;
+    height: auto;
+    overflow: visible; 
+  }
+
+  .custom-banner-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* End banner image */
+
+
+
+/* Footer */
+.footer-custom {
+    background-color: #c8dd3f;
+    position: relative;
+    max-height: 203px;
+}
+
+/* Barra de navegación en escritorio */
+.footer-nav .nav-links {
+    margin: 64px 0 0 78px;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.footer-nav .nav-links .active {
+    font-weight: bold;
+}
+
+/* Logotipos sociales en escritorio */
+.footer-logos {
+    margin: 13px 0 58px 78px;
+}
+
+.social-icons {
+    width: 31px;
+    height: 31px;
+    margin: 0 12px 0 0;
+    object-fit: contain;
+}
+
+/* Logo en escritorio */
+.footer_store_logo {
+    position: absolute; 
+    top: 5px;
+    right: 63px;
+    width: 55px;
+    height: 55px;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+    /* Contenedor del footer */
+    .footer-custom {
+        padding: 20px 10px;
+        max-height: 500px;
+    }
+
+    /* Barra de navegación: Los enlaces se acomodan en columna */
+    .footer-nav .nav-links {
+        margin: 10px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Ajuste en los enlaces de la barra de navegación */
+    .footer-nav .nav-links a {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    /* Ajuste en los iconos sociales */
+    .footer-logos {
+        display: flex;
+        justify-content: center;
+        margin: 13px 0 20px auto;
+    }
+
+    .social-icons {
+        margin-right: 10px;
+    }
+
+    /* Logo centrado en móvil */
+    .footer_store_logo {
+        position: relative;
+      right: auto;
+        margin: auto;
+        display: block;
+    }
+}
+
+/* End footer */
