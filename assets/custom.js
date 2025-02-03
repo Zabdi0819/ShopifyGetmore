@@ -142,3 +142,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+window.addEventListener('scroll', function() {
+  const headerWrapper = document.querySelector('.header-wrapper');
+  if (window.scrollY > 0) {
+    headerWrapper.classList.add('scroll');
+  } else {
+    headerWrapper.classList.remove('scroll');
+  }
+});
+
+

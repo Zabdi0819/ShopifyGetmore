@@ -7,6 +7,9 @@
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
+    <li>
+      texto
+    </li>
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
@@ -38,7 +41,7 @@
                     <li>
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
+                        href="#"
                         class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
                         {% if childlink.current %}
                           aria-current="page"
